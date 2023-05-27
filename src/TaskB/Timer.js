@@ -9,7 +9,12 @@ useEffect(()=>{
    timerID =  setInterval(()=>{
         setCount(count-1);
     }, 1000)
+
+    return ()=>{
+        clearInterval(timerID);
+    }
 })
+
 useEffect(()=>{
     if(count<1)
     {
@@ -20,7 +25,7 @@ useEffect(()=>{
 return(<>
         <h3>
         Task-B Here!
-        {message} {count>0 ? count : ""}
+        {message } {count && count>0 ? count : ""}
     </h3>
 </>)
 }
