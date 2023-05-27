@@ -30,6 +30,18 @@ function PollDisplay(){
     function hideCom(){
         setStart(false);
     }
+    function JavaScript(){
+        setVotesJS(votesJS+1)
+    }
+    function Python(){
+        setVotesPy(votesPy+1)
+    }
+    function Java(){
+        setVotesJava(votesJava+1)
+    }
+    function C(){
+        setVotesC(votesC+1) 
+    }
 
 return (
     <>
@@ -48,7 +60,13 @@ return (
             </div>
              <button onClick={startMethod}>Lets Start Voting</button>
 
-            {start && <UserParticipation callback={hideCom}/> }
+            {start && <UserParticipation 
+            callback={hideCom}
+            JavaScript={JavaScript}
+            Java={Java}
+            Python={Python}
+            C={C}
+            /> }
 
            
     </>

@@ -1,7 +1,9 @@
 function ThankyouMessage(){
 
     return (<>
+    <h2>
     ThankyouMessage
+    </h2>
     </>)
 }
 
