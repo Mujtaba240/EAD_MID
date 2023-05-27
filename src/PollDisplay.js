@@ -37,7 +37,7 @@ return (
             <div>
                 {arrayOFChoices.map((item)=>{
                     return <div>
-                            <li>{item.id}</li>
+                            {/* <li>{item.id}</li> */}
                             <li>{item.label}</li>
                             <li>Number of Votes {votesJS}</li>
                             <button onClick={countVotes} id={item.id} >Give Your Vote</button>
