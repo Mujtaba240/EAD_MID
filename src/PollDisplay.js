@@ -6,7 +6,7 @@ function PollDisplay(){
         const [votesPy, setVotesPy] = useState(0)
         const [votesJava, setVotesJava] = useState(0)
         const [votesC, setVotesC] = useState(0)
-
+        const [start, setStart] = useState(false)
         const [newParticipation, setNewParticipation] = useState(false)
         
     let sampleData = 
@@ -24,7 +24,9 @@ function PollDisplay(){
     }
 
     let arrayOFChoices = [...sampleData.choices]
-
+    const startMethod = ()=>{
+        setStart(true);
+    }
 
 return (
     <>
@@ -41,7 +43,9 @@ return (
                     </div>
                 })}
             </div>
-            <UserParticipation />
+             <button onClick={startMethod}>Lets Start Voting</button>
+
+            {start && <UserParticipation /> }
 
            
     </>

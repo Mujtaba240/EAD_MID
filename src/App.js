@@ -2,6 +2,7 @@ import React from "react";
 import PollDisplay from "./PollDisplay"
 import Timer from './TaskB/Timer'
 import { useState } from "react";
+import ThankyouMessage from "./ThankyouMessage";
 function App() {  
   const [isParticipation, setIsParticipation] = useState(false);
 
@@ -15,7 +16,6 @@ function App() {
     <br/>
      {isParticipation && <PollDisplay/>}
     {/* <UserParticipation /> */}
-
     <br/>
     <br/>
     <br/>
