@@ -2,9 +2,8 @@ import React from "react";
 function App() {  
   return (
     <div className='App'>
+    <h1>PollApp</h1>
     
-    <h2>Hello World!</h2>
-    <h2>EAD MID EXAM</h2>
     </div>
   );
 }
