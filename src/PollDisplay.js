@@ -1,7 +1,12 @@
 import React from "react";
+import { useState } from "react";
 
 function PollDisplay(){
-
+        const [votesJS, setVotesJS] = useState(0)
+        const [votesPy, setVotesPy] = useState(0)
+        const [votesJava, setVotesJava] = useState(0)
+        const [votesC, setVotesC] = useState(0)
+        
     let sampleData = 
         {
         "question": "What is your favorite programming language?",
@@ -18,7 +23,9 @@ function PollDisplay(){
 
     let arrayOFChoices = [...sampleData.choices]
 
-
+    const countVotes = (obj)=>{
+            setVotesJS(votesJS+1)
+    }
 
 return (
     <>
@@ -32,9 +39,11 @@ return (
                     return <div>
                             <li>{item.id}</li>
                             <li>{item.label}</li>
-                            <button>{item.votes}</button>
+                            <li>Number of Votes {votesJS}</li>
+                            <button onClick={countVotes} id={item.id} >Give Your Vote</button>
                     </div>
                 })}
+
             </div>
            
     </>
