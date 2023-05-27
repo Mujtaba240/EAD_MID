@@ -22,7 +22,7 @@ function PollDisplay(){
           { "id": 4, "label": "C#", "votes": 0 }
         ]
     }
-
+    let array = [votesJS,votesPy, votesJava, votesC]
     let arrayOFChoices = [...sampleData.choices]
     const startMethod = ()=>{
         setStart(true);
@@ -51,10 +51,10 @@ return (
                     {sampleData.question}
             </h3>
             <div>
-                {arrayOFChoices.map((item)=>{
+                {arrayOFChoices.map((item, index)=>{
                     return <div>
                             {/* <li>{item.id}</li> */}
-                            <li>{item.label}  -- Number of Votes {votesJS}</li>
+                            <li>{item.label}  -- Number of Votes {array[index]}</li>
                     </div>
                 })}
             </div>
