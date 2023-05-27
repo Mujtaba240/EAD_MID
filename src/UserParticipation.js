@@ -26,8 +26,8 @@ function UserParticipation() {
          {/* <input type="radio" name='choice'>JavaScript</input>
         <input type="radio" name='choice'>JavaScript</input>
         <input type="radio" name='choice'>JavaScript</input>
-        
-    <input type="radio" name='choice'>JavaScript</input>*/}
+        <input type="radio" name='choice'>JavaScript</input>*/}
+    <br/>
     <button onClick={submitResponse}>Submit</button> 
     {feedback && <AnotherParticipant />}
     </>)
