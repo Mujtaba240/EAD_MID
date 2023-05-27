@@ -27,6 +27,9 @@ function PollDisplay(){
     const startMethod = ()=>{
         setStart(true);
     }
+    function hideCom(){
+        setStart(false);
+    }
 
 return (
     <>
@@ -45,7 +48,7 @@ return (
             </div>
              <button onClick={startMethod}>Lets Start Voting</button>
 
-            {start && <UserParticipation /> }
+            {start && <UserParticipation callback={hideCom}/> }
 
            
     </>
