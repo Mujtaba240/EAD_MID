@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
-
+import UserParticipation from './UserParticipation';
 function PollDisplay(){
         const [votesJS, setVotesJS] = useState(0)
         const [votesPy, setVotesPy] = useState(0)
         const [votesJava, setVotesJava] = useState(0)
         const [votesC, setVotesC] = useState(0)
+
+        const [newParticipation, setNewParticipation] = useState(false)
         
     let sampleData = 
         {
@@ -23,9 +25,6 @@ function PollDisplay(){
 
     let arrayOFChoices = [...sampleData.choices]
 
-    const countVotes = (obj)=>{
-            setVotesJS(votesJS+1)
-    }
 
 return (
     <>
@@ -38,13 +37,12 @@ return (
                 {arrayOFChoices.map((item)=>{
                     return <div>
                             {/* <li>{item.id}</li> */}
-                            <li>{item.label}</li>
-                            <li>Number of Votes {votesJS}</li>
-                            <button onClick={countVotes} id={item.id} >Give Your Vote</button>
+                            <li>{item.label}  -- Number of Votes {votesJS}</li>
                     </div>
                 })}
-
             </div>
+            <UserParticipation />
+
            
     </>
 )
